@@ -1,1 +1,42 @@
-<p>produto works!</p>
+<div class="container">
+    <button routerLink="/home" class="voltar">Voltar</button>
+
+    <!-- Formulário de novo produto -->
+     <div class="form">
+        <h4>Novo Produto</h4>
+        <form (ngSubmit)="salvar()">
+            <input type="text" name="nome" [(ngModel)]="produtoAtual.nome" required>
+            <input type="text" name="descricao" [(ngModel)]="produtoAtual.descricao" required>
+            <input type="text" name="estMin" [(ngModel)]="produtoAtual.estoqueMinimo" required>
+        </form>
+     </div>
+
+     <!-- Tabela de Novo Produto -->
+      <div class="tabela">
+        <div class="busca">
+            <input type="text" name="buscar" [(ngModel)]="termoBusca">
+            <button class="buscar" (click)="buscar(termoBusca)">Buscar</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Estoque</th>
+                    <th>Mínimo</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (p of produtos; track p.id) {
+                    <tr>
+                        <td>{{p.id}}</td>
+                        <td>{{p.nome}}</td>
+                        <td>{{p.estoque}}</td>
+                        <td>{{p.estoqueMinimo}}</td>
+                        <td><button class="excluir" (click)="excluir(p.id)"></button></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+      </div>
+</div>
