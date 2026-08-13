@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Api } from '../../service/api';
+import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-produto',
-  imports: [],
+  imports: [FormsModule, RouterLink],
   templateUrl: './produto.html',
   styleUrl: './produto.css',
 })
