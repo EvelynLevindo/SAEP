@@ -1,0 +1,22 @@
+<header class="main-header" *ngIf="exibirHeader">
+  <div class="header-container">
+    <div class="brand">
+      <span class="logo-icon"></span>
+      <strong>Agendamento Domiciliar</strong>
+    </div>
+    
+    <nav class="nav-links">
+      <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+      <a routerLink="/clientes" routerLinkActive="active">Clientes</a>
+      <a routerLink="/agendamentos" routerLinkActive="active">Agendamentos</a>
+    </nav>
+
+    <div class="user-action">
+      <button type="button" (click)="logout()" class="btn-logout">Sair</button>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <router-outlet></router-outlet>
+</main>
