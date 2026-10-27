@@ -1,0 +1,63 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Carlos Silva",
+      "cargo": "Admin"
+    },
+    {
+      "id": "2",
+      "nome": "Mariana Souza",
+      "cargo": "Operador"
+    },
+    {
+      "id": "3",
+      "nome": "João Pedro",
+      "cargo": "Operador"
+    }
+  ],
+  "produtos": [
+    {
+      "id": "1",
+      "nome": "Teclado Mecânico RGB",
+      "sku": "TEC-MEC-001",
+      "quantidade_estoque": 25
+    },
+    {
+      "id": "2",
+      "nome": "Mouse Sem Fio Ergonômico",
+      "sku": "MOU-ERG-002",
+      "quantidade_estoque": 14
+    },
+    {
+      "id": "3",
+      "nome": "Monitor 24'' Full HD",
+      "sku": "MON-24F-003",
+      "quantidade_estoque": 8
+    },
+    {
+      "id": "4",
+      "nome": "Cabo HDMI 2.0 2m",
+      "sku": "CAB-HDM-004",
+      "quantidade_estoque": 50
+    }
+  ],
+  "movimentacoes": [
+    {
+      "id": "1",
+      "produto_id": "1",
+      "usuario_id": "1",
+      "tipo": "entrada",
+      "quantidade_movimentada": 10,
+      "data": "2026-08-28T14:30:00.000Z"
+    },
+    {
+      "id": "2",
+      "produto_id": "2",
+      "usuario_id": "2",
+      "tipo": "saida",
+      "quantidade_movimentada": 2,
+      "data": "2026-08-29T10:15:00.000Z"
+    }
+  ]
+}
